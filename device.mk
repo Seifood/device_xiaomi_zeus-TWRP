@@ -26,7 +26,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bootctrl.taro
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
     update_engine \
