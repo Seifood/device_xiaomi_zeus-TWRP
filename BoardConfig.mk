@@ -41,9 +41,37 @@ TARGET_COPY_OUT_VENDOR := vendor
 # A/B
 AB_OTA_UPDATER := true
 TW_INCLUDE_REPACKTOOLS := true
+BOARD_USES_RECOVERY_AS_BOOT := true
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    odm \
+    product \
+    system \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
+    vendor \
+    vendor_boot
 
 # Kernel
-BOARD_KERNEL_CMDLINE := 
+BOARD_VENDOR_CMDLINE := "console=ttyMSM0,115200n8 \
+		androidboot.hardware=qcom \
+		androidboot.console=ttyMSM0 \
+		androidboot.memcg=1 \
+		lpm_levels.sleep_disabled=1 \
+		video=vfb:640x400,bpp=32,memsize=3072000 \
+		msm_rtb.filter=0x237 \
+		service_locator.enable=1 \
+		androidboot.usbcontroller=a600000.dwc3 \
+		swiotlb=2048 \
+		loop.max_part=7 \
+		cgroup.memory=nokmem,nosocket \
+		reboot=panic_warm \
+		androidboot.init_fatal_reboot_target=recovery"
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 BOARD_BOOTIMG_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
@@ -52,6 +80,10 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/zeus
 TARGET_KERNEL_CONFIG := zeus_defconfig
+
+# HIDL
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+
 
 # Platform
 TARGET_BOARD_PLATFORM := taro
