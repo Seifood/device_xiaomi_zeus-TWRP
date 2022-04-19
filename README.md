@@ -9,7 +9,7 @@
 | CPU     		  | Octa-core (1x3.00 GHz Cortex-X2 & 3x2.50 GHz Cortex-A710 & 4x1.80 GHz Cortex-A510)|
 | GPU     		  | Adreno 730                                               |
 | Memory                  |  128GB 8GB RAM, 256GB 8GB RAM, 256GB 12GB RAM                                   |
-| Shipped Android Version | 11 (MIUI 12)                                                |
+| Shipped Android Version | 12 (MIUI 13)                                                |
 | Storage                 | 128/256GB                                                   |                                                |
 | Battery 		  | Li-Po 4500 mAh non-removable                               |
 | Display 		  | AMOLED, 68B colors, 120Hz, Dolby Vision, HDR10+, 1100 nits (peak) |
