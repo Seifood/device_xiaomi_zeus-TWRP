@@ -63,7 +63,7 @@ AB_OTA_PARTITIONS += \
 
 # Kernel
 BOARD_VENDOR_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 disable_dma32=on bootinfo.fingerprint=zeus_global:12/V13.0.5.0.SLBMIXM:user mtdoops.fingerprint=zeus_global:12/V13.0.5.0.SLBMIXM:user bootconfig
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel.img
+TARGET_PREBUILT_KERNEL := (DEVICE_PATH)/prebuilt/kernel.img
 BOARD_VENDOR_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_OFFSET := 0x00008000
@@ -83,7 +83,6 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_INCLUDE_RECOVERY_DTBO := true
