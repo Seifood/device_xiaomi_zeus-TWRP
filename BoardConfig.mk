@@ -62,13 +62,13 @@ AB_OTA_PARTITIONS += \
     vendor_boot
 
 # Kernel
-BOARD_VENDOR_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 disable_dma32=on bootinfo.fingerprint=zeus_global:12/V13.0.5.0.SLBMIXM:user mtdoops.fingerprint=zeus_global:12/V13.0.5.0.SLBMIXM:user bootconfig
-BOARD_VENDOR_BASE := 0x00000000
+VENDOR_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 disable_dma32=on bootinfo.fingerprint=zeus_global:12/V13.0.5.0.SLBMIXM:user mtdoops.fingerprint=zeus_global:12/V13.0.5.0.SLBMIXM:user bootconfig
+BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_RAMDISK_OFFSET := 0x01000000
-BOARD_TAGS_OFFSET := 0x00000100
-BOARD_HEADER_VERSION := 4
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_BOOT_HEADER_VERSION := 4
 BOARD_HEADER_SIZE := 2128
 BOARD_DTB_SIZE := 2661036
 BOARD_DTB_OFFSET := 0x01f00000
