@@ -92,8 +92,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service \
-    bootctrl.kona \
-    bootctrl.kona.recovery
+    bootctrl.taro \
+    bootctrl.taro.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
@@ -148,8 +148,8 @@ TW_EXCLUDE_APEX := true
     #$(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
     #$(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so
 
-PRODUCT_COPY_FILES += \
-    $(OUT_DIR)/target/product/psyche/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
+#PRODUCT_COPY_FILES += \
+    #$(OUT_DIR)/target/product/psyche/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
 
 # OEM otacert
 #PRODUCT_EXTRA_RECOVERY_KEYS += \
