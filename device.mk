@@ -152,5 +152,5 @@ PRODUCT_COPY_FILES += \
     $(OUT_DIR)/target/product/psyche/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
 
 # OEM otacert
-PRODUCT_EXTRA_RECOVERY_KEYS += \
+#PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/recovery/security/miui
