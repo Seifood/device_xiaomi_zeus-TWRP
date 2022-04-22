@@ -1,4 +1,4 @@
-# Device tree for Xiaomi 12 Pro (codenamed Zeus)
+# Device tree for Xiaomi 12 Pro (codename Zeus)
 
 
 ## Device specifications
