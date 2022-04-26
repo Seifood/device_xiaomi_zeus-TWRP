@@ -24,7 +24,7 @@ PRODUCT_PACKAGES += \
 
 TARGET_COPY_OUT_VENDOR := vendor
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/xiaomi/zeus/recovery/root/system/etc/recovery.fstab
 
     # Ihnerit virtual_ab_ota product
 $(call inherit-product, \
@@ -41,8 +41,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 PRODUCT_SHIPPING_API_LEVEL := 30
  
 #Init Recovery
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc    
+#PRODUCT_COPY_FILES += \
+     #$(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc    
      
 # Virtual A/B OTA
 $(call inherit-product, \
