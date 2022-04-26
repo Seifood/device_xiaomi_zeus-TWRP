@@ -21,7 +21,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
-    
+
+TARGET_COPY_OUT_VENDOR := vendor
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+
     # Ihnerit virtual_ab_ota product
 $(call inherit-product, \
     $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
