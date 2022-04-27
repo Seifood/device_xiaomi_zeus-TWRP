@@ -146,7 +146,6 @@ TW_EXCLUDE_APEX := true
 TARGET_USES_MKE2FS := true
 TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_APEX := true
-TW_LOAD_VENDOR_MODULES := "xiaomi_touch.ko fts_touch_spi.ko fts_touch_spi_k2.ko focaltech_touch.ko adsp_loader_dlkm.ko qti_battery_charger.ko"
 TW_NO_CPU_TEMP := true
 TWRP_INCLUDE_LOGCAT := true
 
