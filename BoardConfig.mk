@@ -95,6 +95,9 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 # Platform
 TARGET_BOARD_PLATFORM := taro
 
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # Avb
 BOARD_AVB_ENABLE := true
 BOARD_AVB_VBMETA_SYSTEM := system
