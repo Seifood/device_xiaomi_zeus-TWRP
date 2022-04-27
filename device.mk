@@ -6,11 +6,6 @@
 #
 
 LOCAL_PATH := device/xiaomi/zeus
-# A/B
-AB_OTA_PARTITIONS += \
-    boot \
-    system \
-    vendor
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
