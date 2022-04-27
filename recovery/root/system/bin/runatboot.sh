@@ -149,15 +149,11 @@ else
 
 	temp_mount "$TEMPVEN" "vendor" "$venpath"
 
-	load_module "aw8697"
-	load_module "focaltech_fts_zf"
-	load_module "texfat"
-	load_module "tntfs"
+  load_module "fts_touch_spi.ko"
+  load_module "xiaomi_touch.ko"
+  load_module "qti_battery_charger.ko"
+  load_module "focaltech_fts.ko"
   load_module "adsp_loader_dlkm.ko"
-  load_module "gpr_dlkm.ko"
-  load_module "q6_notifier_dlkm.ko"
-  load_module "snd_event_dlkm.ko"
-  load_module "spf_core_dlkm.ko"
 
 	finish
 fi
