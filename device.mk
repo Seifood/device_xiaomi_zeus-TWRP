@@ -164,3 +164,9 @@ PRODUCT_COPY_FILES += \
 # OEM otacert
 #PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/recovery/security/miui
+
+# Depmod modules
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/xiaomi_touch.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/xiaomi_touch.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/fts_touch_spi.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/fts_touch_spi.ko
+
