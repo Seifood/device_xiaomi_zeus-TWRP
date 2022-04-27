@@ -39,10 +39,13 @@ on init
     setprop prepdecrypt.setpatch false
     #setprop prepdecrypt.loglevel 2
 
-    # load_modules override props
-    #setprop load_modules.loglevel 2
-
-    start vendor.qti.vibrator
+on property:twrp.modules.loaded=true
+    # Load ADSP firmware for PMIC
+    wait /sys/kernel/boot_adsp/boot
+    write /sys/kernel/boot_adsp/boot 1
+    wait /sys/class/power_supply/battery
+    start health-hal-2-1
+    setprop sys.usb.config mtp,adb
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
