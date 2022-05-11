@@ -56,7 +56,6 @@ jobs:
              repo init -u $MANIFEST --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -j4
              cd bootable/recovery
-             git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/05/5405/5 && git cherry-pick FETCH_HEAD
              cd /home/runner/work/https:/device_xiaomi_zeus-TWRP//device_xiaomi_zeus-TWRP/work
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
        - name: Building TWRP
