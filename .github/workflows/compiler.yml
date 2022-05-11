@@ -101,8 +101,9 @@ jobs:
         export ALLOW_MISSING_DEPENDENCIES=true
         export LC_ALL=C
         source build/envsetup.sh
-        lunch ${{ github.event.inputs.LIBRARY_NAME }}_${{ github.event.inputs.DEVICE_NAME }}-eng
+        lunch twrp_zeus-eng
         make clean && make clobber
+        lunch twrp_zeus-eng
         mka adbd recoveryimage -j$(nproc --all)
         
     - name: Upload to Release
