@@ -17,7 +17,7 @@ on:
 
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
-  DEVICE: cheeseburger
+  DEVICE: zeus
   DT_LINK: https://github.com/Seifoodow/device_xiaomi_zeus-TWRP -b android-12
   DT_PATH: device/xiaomi/zeus
   TARGET: recoveryimage
