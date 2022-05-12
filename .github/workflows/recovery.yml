@@ -1,4 +1,4 @@
-name: Building TWRP Android 12.1
+name: Building Android 12.1
 
 on:
 #  release:
