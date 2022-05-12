@@ -60,6 +60,7 @@ jobs:
        - name: Building TWRP
          run: |
               cd work
+              ls
               . build/envsetup.sh &&lunch twrp_$DEVICE-eng
               rm -rf .repo/
               mka $TARGET
