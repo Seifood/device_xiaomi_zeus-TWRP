@@ -27,7 +27,7 @@ $(call inherit-product, \
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 
 # Include GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
@@ -128,6 +128,7 @@ TWRP_INCLUDE_LOGCAT := true
 #TW_LOAD_VENDOR_MODULES := "xiaomi_touch.ko fts_touch_spi.ko focaltech_fts.ko adsp_loader_dlkm.ko qti_battery_charger.ko"
 
 TARGET_RECOVERY_DEVICE_MODULES += \
+    libandroidicu \
     libdisplayconfig.qti \
     libion \
     vendor.display.config@1.0 \
@@ -149,3 +150,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/xiaomi_touch.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/xiaomi_touch.ko \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/fts_touch_spi.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/fts_touch_spi.ko
 
+PRODUCT_COPY_FILES += \
+  $(OUT_DIR)/target/product/zeus/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
