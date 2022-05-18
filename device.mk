@@ -19,7 +19,7 @@ PRODUCT_PACKAGES += \
 
 TARGET_COPY_OUT_VENDOR := vendor
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-TARGET_RECOVERY_FSTAB := device/xiaomi/zeus/recovery/root/system/etc/recovery.fstab
+#TARGET_RECOVERY_FSTAB := device/xiaomi/zeus/recovery/root/system/etc/recovery.fstab
 
     # Ihnerit virtual_ab_ota product
 $(call inherit-product, \
@@ -125,7 +125,7 @@ TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_APEX := true
 TW_NO_CPU_TEMP := true
 TWRP_INCLUDE_LOGCAT := true
-TW_LOAD_VENDOR_MODULES := "xiaomi_touch.ko fts_touch_spi.ko focaltech_fts.ko adsp_loader_dlkm.ko qti_battery_charger.ko"
+#TW_LOAD_VENDOR_MODULES := "xiaomi_touch.ko fts_touch_spi.ko focaltech_fts.ko adsp_loader_dlkm.ko qti_battery_charger.ko"
 
 TARGET_RECOVERY_DEVICE_MODULES += \
     libdisplayconfig.qti \
