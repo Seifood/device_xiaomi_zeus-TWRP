@@ -112,18 +112,6 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_NO_CPU_TEMP := true 
 TWRP_INCLUDE_LOGCAT := true
-TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko focaltech_fts.ko fts_touch_spi.ko qti_battery_charger.ko xiaomi_touch.ko"
-
-# Kernel modules
-BOOT_KERNEL_MODULES := \
-   focaltech_fts.ko \
-   fts_touch_spi.ko \
-   xiaomi_touch.ko  \
-
-KERNEL_MODULES_LOAD_RAW := $(strip $(shell cat device/xiaomi/zeus/modules.load))
-KERNEL_MODULES_LOAD := $(foreach m,$(KERNEL_MODULES_LOAD_RAW),$(notdir $(m)))
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(filter-out $(BOOT_KERNEL_MODULES), $(KERNEL_MODULES_LOAD))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(filter $(BOOT_KERNEL_MODULES), $(KERNEL_MODULES_LOAD))
 
 # SHRP Stuff
 SHRP_PATH := device/xiaomi/zeus
