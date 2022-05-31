@@ -128,7 +128,6 @@ TWRP_INCLUDE_LOGCAT := true
 #TW_LOAD_VENDOR_MODULES := "xiaomi_touch.ko fts_touch_spi.ko focaltech_fts.ko adsp_loader_dlkm.ko qti_battery_charger.ko"
 
 TARGET_RECOVERY_DEVICE_MODULES += \
-    libandroidicu \
     libdisplayconfig.qti \
     libion \
     vendor.display.config@1.0 \
