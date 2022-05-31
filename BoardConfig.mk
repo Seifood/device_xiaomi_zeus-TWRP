@@ -130,3 +130,4 @@ SHRP_FLASH := 1
 SHRP_DARK := true
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
 SHRP_EXPRESS := true
+BUILD_BROKEN_DUP_SYSPROP := true
