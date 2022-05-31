@@ -48,7 +48,6 @@ jobs:
        - name: Set Swap Space
         uses: pierotofy/set-swap-space@master
         with: swap-size-gb: 10
-
        - name: Sync TWRP A12.1 source and device tree
          run: |
              mkdir work
