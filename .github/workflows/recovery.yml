@@ -58,7 +58,10 @@ jobs:
              git fetch https://gerrit.twrp.me/android_system_vold refs/changes/90/5490/1 && git cherry-pick FETCH_HEAD
              cd /home/runner/work/device_xiaomi_zeus-TWRP/device_xiaomi_zeus-TWRP/work
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
-
+       - name: Set Swap Space
+         uses: pierotofy/set-swap-space@master
+         with:
+          swap-size-gb: 10
        - name: Building TWRP
          run: |
               cd work
