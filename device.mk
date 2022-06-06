@@ -122,6 +122,7 @@ TARGET_USES_MKE2FS := true
 TW_EXCLUDE_APEX := true
 TW_NO_CPU_TEMP := true
 TWRP_INCLUDE_LOGCAT := true
+TW_LOAD_VENDOR_MODULES := "fts_touch_spi.ko xiaomi_touch.ko focaltech_fts.ko atmel_mxt_ts.ko"
 
 TARGET_RECOVERY_DEVICE_MODULES += \
     libdisplayconfig.qti \
