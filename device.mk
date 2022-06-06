@@ -20,7 +20,7 @@ PRODUCT_PACKAGES += \
 TARGET_COPY_OUT_VENDOR := vendor
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 #TARGET_RECOVERY_FSTAB := device/xiaomi/zeus/recovery/root/system/etc/recovery.fstab
-
+TARGET_COPY_OUT_VENDOR := vendor
     # Ihnerit virtual_ab_ota product
 $(call inherit-product, \
     $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
