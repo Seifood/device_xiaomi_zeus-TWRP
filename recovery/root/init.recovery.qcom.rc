@@ -1,4 +1,4 @@
-# Copyright (c) 2017-2018,2020-2021 The Linux Foundation. All rights reserved.
+# Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -26,44 +26,23 @@
 #
 
 on init
-    write /sys/class/backlight/panel0-backlight/brightness 200
-    # Create location for fs_mgr to store abbreviated output from filesystem
-    # checker programs.
-    mkdir /dev/fscklogs 0770 root system
-    start set_permissive
+    setprop sys.usb.controller a600000.dwc3
+    setprop sys.usb.configfs 1
+
+    # unlink /efs > /mnt/vendor/efs
+    rm /efs
+    mkdir /efs
+    mkdir /sec_efs
+
+    # to cut charging battery path
+    write /sys/class/power_supply/battery/siop_level 0
+
+on boot
+    setprop ro.boot.vbmeta.avb_version 1.2
+    setprop ro.boot.avb_version 1.2
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-    # Mount firmware
-    mkdir /firmware
-    mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro
-    # Set fscklog permission
-    chown root system /dev/fscklogs/log
-    chmod 0770 /dev/fscklogs/log
-    start boot-hal-1-1
 
-on boot
-    start variant-script
-    setprop sys.usb.config mtp,adb
-
-on property:twrp.modules.loaded=true
-    # Load ADSP firmware for PMIC
-    wait /sys/kernel/boot_adsp/boot
-    write /sys/kernel/boot_adsp/boot 1
-    wait /sys/class/power_supply/battery
-    start health-hal-2-1
-
-service set_permissive /system/bin/set_permissive.sh
-    user root
-    group root
-    disabled
-    oneshot 
-    seclabel u:r:recovery:s0
-
-service variant-script /system/bin/variant-script.sh
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
+    export ANDROID_ROOT /system_root
