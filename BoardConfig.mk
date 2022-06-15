@@ -107,13 +107,12 @@ PLATFORM_VERSION := 16.1.0
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
-TW_NO_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_NO_CPU_TEMP := true 
 TWRP_INCLUDE_LOGCAT := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
-
+TW_NO_SCREEN_BLANK
 # SHRP Stuff
 SHRP_PATH := device/xiaomi/zeus
 SHRP_MAINTAINER := Droneship
